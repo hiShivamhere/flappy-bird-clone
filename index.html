@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skyhop - Flappy Bird Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Arcade Sprint</p>
+          <h1>Skyhop</h1>
+          <p class="lead">
+            Thread the neon canyons. Tap to lift, breathe to glide. A modern,
+            tactile Flappy Bird clone built for quick sessions.
+          </p>
+          <div class="cta-row">
+            <button class="primary" id="startButton" type="button">Start Run</button>
+            <button class="ghost" id="resetButton" type="button">Reset</button>
+          </div>
+          <div class="mode-toggle" role="group" aria-label="Display mode">
+            <button class="mode-button" data-mode="auto" type="button">Auto</button>
+            <button class="mode-button" data-mode="desktop" type="button">Desktop</button>
+            <button class="mode-button" data-mode="mobile" type="button">Mobile</button>
+          </div>
+          <div class="tips">
+            <span>Controls: click, tap, or press space.</span>
+            <span>Goal: pass as many gates as you can.</span>
+          </div>
+        </div>
+        <div class="stats">
+          <div>
+            <span class="label">Score</span>
+            <span class="value" id="score">0</span>
+          </div>
+          <div>
+            <span class="label">Best</span>
+            <span class="value" id="best">0</span>
+          </div>
+          <div>
+            <span class="label">Status</span>
+            <span class="value" id="status">Ready</span>
+          </div>
+          <div>
+            <span class="label">Mode</span>
+            <span class="value" id="mode">Auto</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="game-panel">
+        <div class="frame">
+          <canvas id="game" width="360" height="640"></canvas>
+          <div class="overlay" id="overlay">
+            <h2>Tap to launch</h2>
+            <p>Keep the glow bird aloft and slip through the gates.</p>
+          </div>
+        </div>
+        <div class="meta">
+          <div>
+            <h3>Flight Rhythm</h3>
+            <p>
+              The bird responds to crisp taps. Short bursts keep altitude steady;
+              longer gaps yield smooth descents.
+            </p>
+          </div>
+          <div>
+            <h3>Secure Build</h3>
+            <p>
+              No external scripts or secrets. Everything runs locally with a
+              single HTML page and a canvas loop.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
